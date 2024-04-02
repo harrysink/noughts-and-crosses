@@ -1,0 +1,118 @@
+@font-face {
+  font-family: Pixograd;
+  src: url(./assets/pixograd-font/Pixograd-nKdM.ttf);
+}
+@font-face {
+  font-family: Cosmic Alien;
+  src: url(./assets/cosmic-alien-font/CosmicAlien-V4Ax.ttf);
+}
+
+.square-button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  font-family: inherit;
+  width: 70px;
+  height: 70px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 7px;
+  transition: border-color 0.5s;
+}
+.square-button:hover {
+  border: 1px solid rgb(197, 159, 233);
+}
+.status {
+  font-family: Cosmic Alien;
+  font-size: larger;
+}
+.board-wrapper {
+  border: 3px solid rgb(197, 159, 233);
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+.board-row {
+  font-family: Cosmic Alien;
+  font-size: small;
+}
+.board {
+  text-align: center;
+  border-radius: 5px;
+  padding: 30px 7px 20px 7px;
+  cursor: pointer;
+  backdrop-filter: blur(3px);
+  -moz-box-shadow: 0px 0px 10px 5px rgb(197, 159, 233);
+  -webkit-box-shadow: 0px 0px 10px 5px rgb(197, 159, 233);
+  box-shadow: 0px 0px 10px 5px rgb(197, 159, 233);
+  transition: 0.5s all ease-in-out;
+  /* background: linear-gradient(-45deg, hsla(333, 100%, 53%, 1) 0%, hsla(33, 94%, 57%, 1) 100%) */
+}
+.board:hover {
+  -moz-box-shadow: 0px 0px 35px 12px rgb(197, 159, 233);
+  -webkit-box-shadow: 0px 0px 35px 12px rgb(197, 159, 233);
+  box-shadow: 0px 0px 35px 12px rgb(197, 159, 233);
+  transition: 0.5s all ease-in-out;
+}
+/* .board::before, .board::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 5px;
+  background: repeating-linear-gradient(-45deg, red 0%, yellow 7.14%, lime 14.28%, aqua 21.42%, cyan 28.56%, blue 35.7%, magenta 42.84, red 50%);
+  animation: gradient 5s infinite linear;
+}
+@keyframes gradient {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 200vw;
+  }
+} */
+.board-row {
+  display: flex;
+  padding: 15px;
+}
+.game-info {
+  display: flex;
+  text-align: center;
+  /* border: 1px solid pink; */
+}
+.ol-first-wrapper button {
+  font-family: Pixograd;
+  font-size: small;
+  border: 1px solid rgb(197, 159, 233);
+  background-color: rgb(197, 159, 233);
+  padding: 10px;
+  cursor: pointer;
+  color: rgb(131, 69, 69);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: 0.5s all ease-in-out;
+  margin-left: 40px;
+}
+.ol-first-wrapper button:hover {
+  -moz-box-shadow: 0px 0px 20px 12px rgb(197, 159, 233);
+  -webkit-box-shadow: 0px 0px 20px 12px rgb(197, 159, 233);
+  box-shadow: 0px 0px 5px 2px rgb(197, 159, 233);
+  transition: 0.5s all ease-in-out;
+}
+.x {
+  position: absolute;
+  left: 120px;
+  top: 1px;
+  font-family: Pixograd;
+  font-size: 5em;
+}
+.o {
+  position: absolute;
+  right: 120px;
+  top: 1px;
+  font-family: Pixograd;
+  font-size: 5em;
+}
