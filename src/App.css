@@ -108,6 +108,10 @@
   top: 1px;
   font-family: Pixograd;
   font-size: 5em;
+  transition: 0.5s all ease-in-out;
+  padding: 5px 25px 5px 25px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .o {
   position: absolute;
@@ -115,4 +119,14 @@
   top: 1px;
   font-family: Pixograd;
   font-size: 5em;
+  transition: 0.5s all ease-in-out;
+  padding: 5px 25px 5px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.x:hover, .o:hover {
+  -moz-box-shadow: 0px 0px 20px 12px rgb(197, 159, 233);
+  -webkit-box-shadow: 0px 0px 20px 12px rgb(197, 159, 233);
+  box-shadow: 0px 0px 5px 2px rgb(197, 159, 233);
+  transition: 0.5s all ease-in-out; 
 }

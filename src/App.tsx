@@ -1,12 +1,22 @@
 import { useState } from 'react';
+import useSound from 'use-sound'
+import bopSound from './assets/iphone-haptic-bop.wav'
+import tingSound from './assets/news-alert-ting.wav'
 import './App.css'
 
 // Square component for individual buttons to be clicked
 function Square({ value, onSquareClick }) {
+  const [initSound] = useSound(tingSound, {
+    volume: 0.2,
+    playbackRate: 1.5,
+    interrupt: false
+  })
   return (
-    <button className="square-button" onClick={onSquareClick}>
-      {value}
-    </button>
+    <div onClick={initSound}>
+      <button className="square-button" onClick={onSquareClick}>
+        {value}
+      </button>
+    </div>
   );
 }
 
@@ -63,6 +73,11 @@ function Game() {
   const [currentMove, setCurrentMove] = useState(0);
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
+  const [playSound] = useSound(bopSound, {
+    volume: 1,
+    playbackRate: 1.5,
+    interrupt: false
+  })
 
   function handlePlay(nextSquares) {
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
@@ -81,10 +96,11 @@ function Game() {
     } else {
       description = 'go to game start';
     }
+
     return (
       <div className='ol-second-wrapper'>
         <div className='ol-first-wrapper'>
-          <ol key={move}>
+          <ol key={move} onClick={playSound}>
             <button onClick={() => jumpTo(move)}>
               {description}
             </button>
@@ -129,7 +145,7 @@ function calculateWinner(squares) {
 
 function App() {
   return (
-    <div>
+    <div className='App'>
       <p className='x'>X</p>
       <p className='o'>O</p>
       <Game />
