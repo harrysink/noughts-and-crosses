@@ -10,4 +10,4 @@ So feel free to submit your pull requests, i'll be delighted to see em'!
 
 In the meantime, enjoy!
 
-### Note: For the best playing experience, view on desktop!.
+### Note: For the best playing experience, view on desktop!
