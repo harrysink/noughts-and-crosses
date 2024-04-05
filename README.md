@@ -10,4 +10,4 @@ So feel free to submit your pull requests, i'll be delighted to see em'!
 
 In the meantime, enjoy!
 
-### Note: This webapp is currently only supported for desktop use, a mobile-friendly version will be implemented subsequently.
+### Note: For the best playing experience, view on desktop!.
