@@ -7,6 +7,9 @@
   src: url(./assets/cosmic-alien-font/CosmicAlien-V4Ax.ttf);
 }
 
+.App {
+  margin: 40px;
+}
 .square-button {
   border-radius: 8px;
   border: 1px solid transparent;
